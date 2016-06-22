@@ -1,0 +1,119 @@
+﻿
+@model BilalEADProject.Models.Posts
+@{
+    ViewBag.Title = "SubmitPost";
+}
+
+<div class="row" style="text-align:center; margin-bottom:105px">
+    <div class="col-sm-3 col-sm-offset-4 " size="50px">
+
+        
+        <form action="/Client/Postsubmits" method="post">
+
+
+
+            <div class="editor-field">
+
+                @Html.TextBoxFor(model => model.Model, null, new { placeholder = "Model", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Model)
+            </div>
+
+
+
+
+            <br />
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Make, null, new { placeholder = "Make", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Make)
+            </div>
+
+            <br />
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Year, new { placeholder = "Year", type = "text", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Year)
+            </div>
+
+
+
+
+
+
+            <br />
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Engine, null, new { placeholder = "Engine capacity in CC", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Engine)
+            </div>
+            <br />
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Registration, null, new { placeholder = "Registration Year", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Registration)
+            </div>
+            <br />
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Price, null, new { placeholder = "Price in Range", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Price)
+            </div>
+            <br />
+
+            <div class="editor-field">
+
+                @Html.TextBoxFor(model => model.Location, null, new { placeholder = "Location Area", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Location)
+            </div>
+            <br />
+
+            <div class="editor-field">
+
+                @Html.TextBoxFor(model => model.Type, null, new { placeholder = "Car, Bike or Accessories ", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Type
+                                                                           )
+            </div>
+            <br />
+
+            @*<div class="editor-field">
+
+                @Html.TextBoxFor(model => model.Status, null, new { value= "0", placeholder = "", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Status)
+            </div>*@
+
+            @*<div class="editor-field">
+
+                @Html.TextBoxFor(model => model.Status, null, new { placeholder = "Answer3", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Status)
+            </div>
+
+            <div class="editor-field">
+
+                @Html.TextBoxFor(model => model. null, new { placeholder = "Answer3", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessageFor(model => model.Status)
+            </div>*@
+
+
+
+
+            <div class="row" style="text-align:center; margin-bottom:70px">
+                <div class="col-sm-1 col-sm-offset-1 " size="25px">
+                    Upload Image: <input type="file" name="image" />
+                </div>
+
+            </div>
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Postsubmits">Submit Post</button>
+
+
+            </form>
+
+
+
+
+            <br />
+
+
+</div>
+</div>

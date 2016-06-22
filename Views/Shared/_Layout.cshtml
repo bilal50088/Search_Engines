@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+
+
+
+    <style>
+        body {
+            background: url(../../Content/images/back1.jpg) no-repeat center center fixed;
+     
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #dbc3a3;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="banner">
+        <div class="container">
+
+            <div>
+                <h1 style="font-family: 'BankGothic Md BT'; color: #1f0d07; margin-bottom:-20px">E-Mobile</h1>
+                <h3 style="font-family: 'BankGothic Md BT'; color: #28110a; margin-bottom: -10px">
+                    Find your ride tension free...!!
+                </h3>
+                <img src="~/Content/images/logo.jpg" style="margin-left: 1080px; margin-top: -90px; margin-bottom: -30px; width:190px; height: 80px; " />
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav " style="margin-left:15px">
+
+
+
+                <li role="presentation"><a href="/Home/Index" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;">Home</a></li>
+                <li role="presentation"><a href="/Home/About" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;">About</a></li>
+                <li role="presentation"><a href="/Home/Contectus" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;">Contact Us</a></li>
+                <li role="presentation"><a href="/Client/Gallary" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;">Gellary</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-right:25px">
+                <li><a href="/Account/Signup" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;"><span class="glyphicon glyphicon-user" style="color: #2186ac"></span> Sign Up</a></li>
+                <li><a href="/Account/Login" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;"><span class="glyphicon glyphicon-log-in" style="color: #27c27f"></span> Login</a></li>
+                <li><a href="/Home/index" style="font-family: BankGothic Lt BT; font-size: medium; color: #dbc3a3;"><span class="glyphicon glyphicon-log-in" style="color: #27c27f"></span> Log out</a></li>
+               </ul>
+        </div>
+
+    </nav>
+
+
+
+
+
+    @RenderBody()
+
+
+
+
+
+
+    <img src="~/Image/divi.png" style=" margin-bottom -75px;margin-top:1px; margin-left:1px;width:1345px" />
+    <br />
+    <br />
+    <img src="~/Image/thanks1.png" style="margin-left: 940px; margin-bottom: 1px; margin-top: 20px; height: 70px;  " />
+    <div style="margin-top: -50px; color: #391a10; text-align: left; text-shadow: initial; margin-left: 20px; font: bold; font-family: 'Harlow Solid'; font-style: italic; font-size: 30px; ">
+        <div style="font-family:'Comic Sans MS'; font-size:15px; margin-left:10px">
+            <b> &copy;  2016 E-Mobile<br> All Rights Reserved. </b>
+        </div>
+
+    </div>
+</body>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

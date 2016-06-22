@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Carinfo";
+}
+
+<h2>Carinfo</h2>
+
+<div class="row" style="text-align:center; margin-bottom:105px">
+    <div class="col-sm-3 col-sm-offset-4 " size="50px">
+
+
+
+        <form action="/Account/Postcar/" method="post">
+            <h2 class="from-sigup-heading">Please Enter Car Information</h2>
+
+
+            <div>
+                @Html.TextBox("model", null, new { placeholder = "Model", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Model")
+            </div>
+
+            <br />
+
+            <div>
+                @Html.TextBox("make", null, new { placeholder = "Make", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Make")
+            </div>
+            <br />
+
+            <div>
+                @Html.TextBox("year", null, new { placeholder = "Years", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Year")
+            </div>
+            <br />
+
+            <div>
+                @Html.TextBox("engine", null, new { placeholder = "Engine", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Engine")
+            </div>
+            <br />
+
+            <div>
+                @Html.TextBox("registration", null, new { placeholder = "Registration", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Registration")
+            </div>
+
+            <br />
+
+            <div>
+                @Html.TextBox("price", null, new { placeholder = "Price", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Price")
+            </div>
+
+
+
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Submit</button>
+        </form>
+
+    </div>
+</div>

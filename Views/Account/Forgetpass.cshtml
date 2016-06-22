@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Forgetpass";
+}
+
+<form action="/Account/Change" method="post">
+    <h2 class="form-signin-heading">Enter Email that is associated to your account</h2>
+
+    <div>
+
+        @Html.TextBox("Email", null, new { placeholder = "Email Address ", type = "text", id = "username", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+        @Html.ValidationMessage("Email")
+
+
+    </div>
+
+    <br />
+
+    <div>
+        @Html.Label("Birth place")
+        @Html.TextBox("Ans1", null, new { placeholder = "Answer1", type = "text", id = "username", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+        @Html.ValidationMessage("Email")
+
+
+    </div>
+    <br />
+
+    <div>
+        @Html.Label("Birth place")
+        @Html.TextBox("Ans2", null, new { placeholder = "Answer2 ", type = "text", id = "username", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+        @Html.ValidationMessage("Ans2")
+
+
+    </div>
+    <br />
+
+    <div>
+        @Html.Label("First pet")
+        @Html.TextBox("Ans3", null, new { placeholder = "Answer3 ", type = "text", id = "username", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+        @Html.ValidationMessage("Ans3")
+
+
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="">submit</button>
+
+</form>
+

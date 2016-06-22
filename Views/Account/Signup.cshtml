@@ -1,0 +1,153 @@
+﻿@model BilalEADProject.Models.Customer
+    
+@{
+    ViewBag.Title = "Signup";
+}
+
+<div class="row" style="text-align:center; margin-bottom:105px">
+    <div class="col-sm-3 col-sm-offset-4 " size="50px">
+
+        @using (Html.BeginForm())
+        {
+            <h2 style="font-family: 'Blackadder ITC'; margin-top: 10px; margin-bottom: 10px; text-align: center; color: #ffffff;"><span class="glyphicon glyphicon-user" color #1f0d07;"class="from-sigup-heading"></span>Please sign up</h2>
+
+            <fieldset>
+                <legend>Customer</legend>
+
+
+                <div class="editor-field">
+
+                    @Html.TextBoxFor(model => model.UserName, null, new { placeholder = "UserName", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </div>
+
+                
+           
+              
+                <br />
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Password, null, new { placeholder = "Password", type = "Password", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+
+                <br />
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Email, new { placeholder = "Email",type="Email", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+
+                <div>
+                    <input type="button" id="b1" value="check">
+                    
+                </div>
+
+                <div id="result">
+
+                </div>
+
+
+                <script src="~/scripts/jquery-1.10.2.js"></script>
+
+
+                <script>
+                     $(document).ready(function () {
+
+
+
+                         $('#b1').click(function () {
+
+                             alert("buttionclick");
+                             var email = $('#Email').val();
+                             
+                            if(true)
+                            {
+                                alert("checking ");
+                                $.getJSON("/Account/CheckEmail?Email=" + email, function (data) {
+                                    $('#checking').hide();
+                                    if (data) {
+                                        alert("avialale");
+                                        $('#result').text("NOT AVAILABLE!!!");
+                                        $('#result').innerHTML("NOT AVAILABLE!!!");
+
+                                    }
+                                    else {
+                                        alert("not available");
+                                        $('#result').text("AVAILABLE!!!");
+
+                                    }
+                                });
+                            }
+                            else{
+                                $('#result').text("Invalid Email Format!!!");
+                            }
+
+
+
+                        });
+
+
+                     });
+
+                </script>
+                <br />
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Address, null, new { placeholder = "Address", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Phoneno, null, new { placeholder = "Phoneno", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Cnic, null, new { placeholder = "CNIC", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Cnic)
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    @Html.Label("Birth Place")
+                    @Html.TextBoxFor(model => model.Ans1, null, new { placeholder = "Answer1", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Ans1)
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    @Html.Label("Best Friend")
+                    @Html.TextBoxFor(model => model.Ans2, null, new { placeholder = "Answer2", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Ans2)
+                </div>
+                <br />
+
+                <div class="editor-field">
+                    @Html.Label("First Pet")
+                    @Html.TextBoxFor(model => model.Ans3, null, new { placeholder = "Answer3", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                    @Html.ValidationMessageFor(model => model.Ans3)
+                </div>
+
+
+
+
+
+                <div class="row" style="text-align:center; margin-bottom:70px">
+                    <div class="col-sm-1 col-sm-offset-1 " size="25px">
+                        Upload Image: <input type="file" name="image" />
+                    </div>
+
+                </div>
+
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" value="Signup">Sign in</button>
+
+            </fieldset>
+        }
+
+
+    </div>
+</div>

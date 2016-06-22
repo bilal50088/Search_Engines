@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="row" style="text-align:center; margin-bottom:105px">
+    <div class="col-sm-3 col-sm-offset-4 " size="50px">
+
+
+
+        <form action="/Account/Signin" method="post">
+            <h2 class="form-signin-heading">Please sign in</h2>
+
+            <div>
+              
+                @Html.TextBox("Name",null, new { placeholder="UserName", type = "text", id = "username", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("UserName")
+
+
+
+            </div>
+
+            <br />
+
+            <div>
+                @Html.TextBox("Password", null, new { placeholder = "Password", type = "text", id = "t1", style = "height:30px ; width:300px ;font-size:small ; border-radius: 25px; border: 2px solid #D3D3D3; padding: 20px" })
+                @Html.ValidationMessage("Password")
+            </div>
+            <div class="row" style="text-align:center; margin-bottom:70px">
+                <div class="col-sm-1 col-sm-offset-1 " size="25px">
+                    @Html.CheckBox("isNewlyEnrolled", true)
+
+                </div>
+                @Html.Label("Remeber me ")
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Sign in</button>
+                 
+        </form>
+
+
+        <form action="/Account/Forgetpass" method="post">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Forgetpass">Forget Password</button>
+        </form>
+
+    </div>
+</div>
